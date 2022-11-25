@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Card from "../components/Card";
 export default function Test() {
   const [username, setUsername] = useState("");
   const [userData, setUserData] = useState("");
@@ -16,7 +17,7 @@ export default function Test() {
         <input value={username} onChange={(e) => setUsername(e.target.value)} />
         <button onClick={search}>Search for User</button>
 
-        {userData && <pre>Data:{JSON.stringify(userData, null, 4)}</pre>}
+        {userData && <Card data={userData} username={username} />}
       </div>
     </div>
   );
