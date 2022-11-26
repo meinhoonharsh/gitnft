@@ -1,11 +1,12 @@
 import React from "react";
 import "./ConnectButton.scss";
 
-export default function ConnectButton() {
+export default function ConnectButton({ onClick }) {
   return (
     <div>
-      <button className="button">
-        <span className="button__text">
+      <button className="button" onClick={onClick}>
+        Connect
+        {/* <span className="button__text">
           <span>b</span>
           <span>u</span>y
         </span>
@@ -14,7 +15,7 @@ export default function ConnectButton() {
         <span>t</span>
         <span>u</span>
         <span>f</span>
-        <span>f</span>
+        <span>f</span> */}
         <svg
           className="button__svg"
           role="presentational"
