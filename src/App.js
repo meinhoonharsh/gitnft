@@ -18,6 +18,7 @@ import Home from "./pages/Home";
 import React from "react";
 import Index from "./pages/Index";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
