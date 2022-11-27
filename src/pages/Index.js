@@ -9,7 +9,7 @@ export default function Index() {
   };
   return (
     <div className="index-page">
-      <div className="container">
+     <div className="container">
         {/* <ConnectedButton onClick={ConnectWallet} /> */}
         <ConnectButton />
         <a href="/home">Go to Home Page</a>
