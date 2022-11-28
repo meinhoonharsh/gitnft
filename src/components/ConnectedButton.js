@@ -1,7 +1,7 @@
 import React from "react";
-import "./ConnectButton.scss";
+import "./ConnectedButton.scss";
 
-export default function ConnectButton({ onClick }) {
+export default function ConnectedButton({ onClick }) {
   return (
     <div>
       <button className="button" onClick={onClick}>
