@@ -1,6 +1,7 @@
 import React from "react";
-import ConnectButton from "../components/ConnectButton";
+import ConnectedButton from "../components/ConnectedButton";
 import "./Index.scss";
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 export default function Index() {
   const ConnectWallet = () => {
@@ -8,8 +9,9 @@ export default function Index() {
   };
   return (
     <div className="index-page">
-      <div className="container">
-        <ConnectButton onClick={ConnectWallet} />
+     <div className="container">
+        {/* <ConnectedButton onClick={ConnectWallet} /> */}
+        <ConnectButton />
         <a href="/home">Go to Home Page</a>
       </div>
     </div>
