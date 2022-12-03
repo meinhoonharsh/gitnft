@@ -50,8 +50,9 @@ export default function Test() {
               <span>NFT</span> By Us
             </h1>
             <p className="mb">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima sunt
-              sed tempora neque molestiae corrupti nobis harum ullam eos nam!
+              Hey Anon 👋! <br />
+              Introducing GitNFT based on your github stats. <br />
+              Get Your First NFT and show it off to the World.
             </p>
             {/* sir ka likha coad starts*/}
             <input className="search" value={username} onChange={(e) => setUsername(e.target.value)} />
@@ -79,17 +80,15 @@ export default function Test() {
       <div className="section" id="explore">
           <div className="container flex">
             <div className="visual">
-              <img src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/explore.jpg" alt="" />
+              
             </div>
             <div className="text">
               <h2 className="primary mb">
-                Explore Our Fitness <br />
-                Studio
+                What It's <br />
+                About
               </h2>
               <p className="tertiary mb">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-                esse vitae ratione quos maiores eveniet temporibus illum! Eligendi
-                amet officia unde sint totam ut optio. Molestiae, illo quia?
+                The main thing we want from you is to have fun using this Website.
               </p>
               <a href="#" className="btn mt">Get Started Now</a>
             </div>
@@ -101,8 +100,8 @@ export default function Test() {
           <h2 className="primary mb">Our Professional Trainers</h2>
           <div className="container flex">
             <div className="trainer">
-              <img src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/trainer1.jpg" alt="" />
-              <h3 className="secondary mb">Alan Smith</h3>
+              
+              <h3 className="secondary mb">Divyanshu Urmaliya</h3>
               <p className="tertiary mb">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.
               </p>
@@ -111,8 +110,7 @@ export default function Test() {
               </a>
             </div>
             <div className="trainer">
-              <img src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/trainer2.jpg" alt="" />
-              <h3 className="secondary mb">Alan Smith</h3>
+              <h3 className="secondary mb">Sumit Choudhary</h3>
               <p className="tertiary mb">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.
               </p>
@@ -121,8 +119,25 @@ export default function Test() {
               </a>
             </div>
             <div className="trainer">
-              <img src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/trainer3.jpg" alt="" />
-              <h3 className="secondary mb">Alan Smith</h3>
+              <h3 className="secondary mb">Nikhil Sondhiya</h3>
+              <p className="tertiary mb">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.
+              </p>
+              <a href="#" className="btn-2">
+                <ion-icon name="arrow-redo-circle-outline" />
+              </a>
+            </div>
+            <div className="trainer">
+              <h3 className="secondary mb">Aman Singh</h3>
+              <p className="tertiary mb">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.
+              </p>
+              <a href="#" className="btn-2">
+                <ion-icon name="arrow-redo-circle-outline" />
+              </a>
+            </div>
+            <div className="trainer">
+              <h3 className="secondary mb">Abhineet Baghel</h3>
               <p className="tertiary mb">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.
               </p>
