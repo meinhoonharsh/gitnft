@@ -51,6 +51,7 @@ export default function Card({ data, username }) {
     <div>
       <div className="canvas-container">
         <canvas ref={canvasRef}></canvas>
+        <button class="btn">Mint GitNFT</button>
         <pre>Data:{JSON.stringify(data, null, 4)}</pre>
       </div>
     </div>
