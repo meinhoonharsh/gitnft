@@ -139,7 +139,7 @@ export default function Test() {
             <div className="trainer">
               <h3 className="secondary mb">Abhineet Baghel</h3>
               <p className="tertiary mb">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.
+                The Last One
               </p>
               <a href="#" className="btn-2">
                 <ion-icon name="arrow-redo-circle-outline" />
