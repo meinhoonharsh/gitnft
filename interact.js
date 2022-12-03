@@ -1,60 +1,8 @@
-import '@rainbow-me/rainbowkit/styles.css';
-import {
-  getDefaultWallets,
-  RainbowKitProvider,
-  darkTheme
-} from '@rainbow-me/rainbowkit';
-import {
-  chain,
-  configureChains,
-  createClient,
-  WagmiConfig,
-} from 'wagmi';
-import { alchemyProvider } from 'wagmi/providers/alchemy';
-import { publicProvider } from 'wagmi/providers/public';
-import "./App.css";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import {useEffect, React} from "react";
-import Index from "./pages/Index";
-const{ethers} = require("ethers");
+//0x417997417dd95f45bb4986abff5dfae5b5b0a34a
+const { ethers } = require("ethers");
+const provider = new ethers.providers.JsonRpcProvider(`https://goerli.infura.io/v3/31ae6a1204714571a660c04d41a86107`);
 
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Index />,
-  },
-  {
-    path: "/home",
-    element: <Home />,
-  },
-]);
-
-const { chains, provider } = configureChains(
-  [chain.mainnet, chain.polygon, chain.goerli, chain.arbitrum],
-  [
-    // alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
-    publicProvider()
-  ]
-);
-
-const { connectors } = getDefaultWallets({
-  appName: 'My Git NFT App',
-  chains
-});
-
-const wagmiClient = createClient({
-  autoConnect: true,
-  connectors,
-  provider
-})
-
-function App() {
-
-  const walletAddress = "0x0b96d62349def159655ca16af82f00dde3737d4b";
-
-  useEffect(() => {
+const walletAddress = "0x0b96d62349def159655ca16af82f00dde3737d4b";
 const walletAbi = [
 	{
 		"inputs": [],
@@ -481,43 +429,29 @@ const walletAbi = [
 		"stateMutability": "view",
 		"type": "function"
 	}
-];
+]
 
-function writeContract()  {
-  // const provider = new ethers.providers.Web3Provider(window.ethereum);
-  // await provider.send("eth_requestAccounts", []);
-  // const signer = provider.getSigner();
-  // const contract = new ethers.Contract(walletAddress, walletAbi, signer);
-  // // await contract.setValue(2);
-  // //await contract.sendEthContract({ value: ethers.utils.parseEther("0.1") });
-  // await contract.sendEthUser("0x0b96d62349def159655ca16af82f00dde3737d4b", {
-  //   value: ethers.utils.parseEther("0.01"),
-  // });
-  alert("Kaam nhi kar rha!")
-};
-writeContract();
-}, []);
-
-
-
-
-
-  return (
-    <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider  chains={chains} coolMode={chains} theme={darkTheme({
-      accentColor: '#7b3fe4',
-      accentColorForeground: 'white',
-      borderRadius: 'small',
-      fontStack: 'system',
-      overlayBlur: 'small',
-    })}>
-    <>
-      <RouterProvider  router={router} />
-      <button onClick={writeContract}></button>
-    </>
-      </RainbowKitProvider>
-    </WagmiConfig>                    
+const contractIntreaction = async () => {
+  const walletContract = new ethers.Contract(
+    walletAddress,
+    walletAbi,
+    provider
   );
-}
 
-export default App;
+  // const contractName = await walletContract.name();
+  // console.log("Contract Name:", contractName);
+
+  // const num = await walletContract.getValue();
+  // console.log("Number Value:", String(num));
+
+  const contractBalance = await walletContract.contractBalance();
+  const balethContract = ethers.utils.formatEther(contractBalance);
+  console.log("Contract Balance:", balethContract);
+
+  // const userBalance = await walletContract.accountBalance(
+  //   "0xBE4024Fa7461933F930DD3CEf5D1a01363E9f284"
+  // );
+  // const balethUser = ethers.utils.formatEther(userBalance);
+  // console.log("User Balance:", balethUser);
+};
+contractIntreaction();
