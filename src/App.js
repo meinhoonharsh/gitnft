@@ -44,7 +44,7 @@ const { connectors } = getDefaultWallets({
 });
 
 const wagmiClient = createClient({
-  autoConnect: false,
+  autoConnect: true,
   connectors,
   provider
 })
@@ -63,7 +63,7 @@ function App() {
       <RouterProvider  router={router} />
     </>
       </RainbowKitProvider>
-    </WagmiConfig>
+    </WagmiConfig>                    
   );
 }
 
