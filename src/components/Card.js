@@ -43,6 +43,18 @@ export default function Card({ data, username }) {
         ctx.font = "bold 40px 'Rajdhani'";
         ctx.fillStyle = "#0d1117";
         ctx.fillText("@" + username, frame.width / 2, 600);
+        if(bio!==null){
+          ctx.font = "medium 36px 'Rajdhani'";
+        ctx.fillStyle = "#5b5c5c";
+        ctx.fillText( bio, frame.width / 2, 650);
+        }
+        ctx.font = "light 20px 'Rajdhani'";
+        ctx.fillStyle = "#0d1117";
+        ctx.fillText("Followers:"+" " + followers, frame.width*2 / 6, 800);
+        ctx.font = "light 20px 'Rajdhani'";
+        ctx.fillStyle = "#0d1117";
+        ctx.fillText("Repository:"+" " + public_repos, frame.width*4 / 6, 800);
+        
       };
     };
   }, []);

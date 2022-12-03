@@ -459,3 +459,19 @@ body {
   border-top-right-radius : 14px;
   padding: 9px 12px;
 }
+.container-relative{
+  position: relative;
+  width: 100vw;
+}
+.row-absolut{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+.menu{
+  width: 100vw;
+}
+.ju367v9c {
+  background: red !important;
+}
