@@ -34,7 +34,7 @@ export default function Test() {
             />
           </div>
 
-          <a href="#" className="btn">
+          <a href="#" className="btn" >
             Connect Wallet
           </a>
           <ConnectButton />
@@ -84,7 +84,7 @@ export default function Test() {
             </div>
             <div className="text">
               <h2 className="primary mb">
-                What It's <br />
+                What It's 
                 About
               </h2>
               <p className="tertiary mb">
@@ -97,7 +97,7 @@ export default function Test() {
         {/* End Explore */}
         {/* Trainer */}
         <div className="section" id="trainer">
-          <h2 className="primary mb">Our Professional Trainers</h2>
+          <h2 className="primary mb">Our Team</h2>
           <div className="container flex">
             <div className="trainer">
               
