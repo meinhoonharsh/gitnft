@@ -493,7 +493,7 @@ function writeContract()  {
   // await contract.sendEthUser("0x0b96d62349def159655ca16af82f00dde3737d4b", {
   //   value: ethers.utils.parseEther("0.01"),
   // });
-  alert("Kaam nhi kar rha!")
+//   alert("Kaam nhi kar rha!")
 };
 writeContract();
 }, []);
@@ -513,7 +513,7 @@ writeContract();
     })}>
     <>
       <RouterProvider  router={router} />
-      <button onClick={writeContract}></button>
+      
     </>
       </RainbowKitProvider>
     </WagmiConfig>                    
