@@ -90,7 +90,13 @@ export default function Test() {
               <p className="tertiary mb">
                 The main thing we want from you is to have fun using this Website.
               </p>
-              <a href="#" className="btn mt">Get Started Now</a>
+              <p className="tertiary mb">
+                We want to onboard more and more frens to Web3 via our Dapp.
+              </p>
+              <p className="tertiary mb">
+                Enter your github username and we make something for you!
+              </p>
+
             </div>
           </div>
         </div>
@@ -103,7 +109,7 @@ export default function Test() {
               
               <h3 className="secondary mb">Divyanshu Urmaliya</h3>
               <p className="tertiary mb">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.
+                I worked on Blockend side of this project.
               </p>
               <a href="#" className="btn-2">
                 <ion-icon name="arrow-redo-circle-outline" />
@@ -112,7 +118,7 @@ export default function Test() {
             <div className="trainer">
               <h3 className="secondary mb">Sumit Choudhary</h3>
               <p className="tertiary mb">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.
+              I worked on Frontend side of this project.
               </p>
               <a href="#" className="btn-2">
                 <ion-icon name="arrow-redo-circle-outline" />
@@ -121,7 +127,7 @@ export default function Test() {
             <div className="trainer">
               <h3 className="secondary mb">Nikhil Sondhiya</h3>
               <p className="tertiary mb">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.
+              I worked on Design side of this project.
               </p>
               <a href="#" className="btn-2">
                 <ion-icon name="arrow-redo-circle-outline" />
@@ -130,7 +136,7 @@ export default function Test() {
             <div className="trainer">
               <h3 className="secondary mb">Aman Singh</h3>
               <p className="tertiary mb">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.
+              I worked on Integration side of this project.
               </p>
               <a href="#" className="btn-2">
                 <ion-icon name="arrow-redo-circle-outline" />
@@ -139,7 +145,7 @@ export default function Test() {
             <div className="trainer">
               <h3 className="secondary mb">Abhineet Baghel</h3>
               <p className="tertiary mb">
-                The Last One
+              I worked on  Integration side of this project.
               </p>
               <a href="#" className="btn-2">
                 <ion-icon name="arrow-redo-circle-outline" />
