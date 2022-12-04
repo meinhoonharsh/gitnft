@@ -23,7 +23,7 @@ const{ethers} = require("ethers");
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Index/>,
   },
   {
     path: "/home",

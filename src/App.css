@@ -473,5 +473,28 @@ body {
   width: 100vw;
 }
 .ju367v9c {
-  background: red !important;
+  background: #29a396 !important;
+  color: white;
+  cursor: pointer;
+  border-bottom-right-radius : 14px;
+  border-top-right-radius : 14px;
+  padding: 9px 12px;
+}
+.card-about{
+  box-sizing: border-box;
+  padding: 2rem;
+  margin-right: 1rem;
+  width: 25rem;
+}
+.canvas-container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh !important;
+}
+.btn-mint{
+  margin: 1.5rem;
+  padding: 8px 25px;
+  width: 375px;
+  text-align: center;
+  margin-bottom: 1rem !important;
 }

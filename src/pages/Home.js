@@ -1,19 +1,22 @@
 import React from "react";
 import { useState } from "react";
-import Card from "../components/Card";
+import {Card} from "../components/Card";
 import logo from '../img/logo.png';
+import about from '../img/gitnft-about.jpeg';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-
+// var About = require('../components/Card').default
 import "./Index.scss";
+
 export default function Test() {
   const [username, setUsername] = useState("");
   const [userData, setUserData] = useState("");
 
+
   function search() {
     fetch(`https://api.github.com/users/${username}`)
       .then((response) => response.json())
-      .then((data) => setUserData(data));
-  }
+      .then((data) => setUserData(data));}
+  
   return (
     <>
       <div className="container-relative">
@@ -33,10 +36,6 @@ export default function Test() {
               alt="LOGO"
             />
           </div>
-
-          <a href="#" className="btn" >
-            Connect Wallet
-          </a>
           <ConnectButton />
         </div>
       </div>
@@ -55,10 +54,29 @@ export default function Test() {
               Get Your First NFT and show it off to the World.
             </p>
             {/* sir ka likha coad starts*/}
-            <input className="search" value={username} onChange={(e) => setUsername(e.target.value)} />
-            <button className="search-btn" onClick={search}>Search for User</button>
+           
+              
+              {/* {(() => {
+        if (!ConnectButton === true) {
+          return (
+            <ConnectButton />
+            
+          )
+        } else {
+          return (
+            <> */}
+            {/* <input className="search" value={username} onChange={(e) => setUsername(e.target.value)} />
+              <button className="search-btn" onClick={search}>Search for User</button>
+              {userData && <Card data={userData} username={username} />} */}
+              {/* </>
+          )
+        }
+      })()} */}
+      <input className="search" value={username} onChange={(e) => setUsername(e.target.value)} />
+              <button className="search-btn" onClick={search}>Search for User</button>
+              {userData && <Card data={userData} username={username} />}
+            
 
-            {userData && <Card data={userData} username={username} />}
             {/* sir ka likha coad end */}
             {/* search option ka alt*/}
             {/* <a href="#" className="btn">
@@ -79,8 +97,8 @@ export default function Test() {
       {/* Explore */}
       <div className="section" id="explore">
           <div className="container flex">
-            <div className="visual">
-              
+            <div className="visual card-about">
+              <img src={about} alt="" />
             </div>
             <div className="text">
               <h2 className="primary mb">
@@ -125,7 +143,7 @@ export default function Test() {
               </a>
             </div>
             <div className="trainer">
-              <h3 className="secondary mb">Nikhil Sondhiya</h3>
+              <h3 className="secondary mb">Harsh Vishwakarma</h3>
               <p className="tertiary mb">
               I worked on Design side of this project.
               </p>
@@ -134,7 +152,7 @@ export default function Test() {
               </a>
             </div>
             <div className="trainer">
-              <h3 className="secondary mb">Aman Singh</h3>
+              <h3 className="secondary mb">Aman Kushwaha</h3>
               <p className="tertiary mb">
               I worked on Integration side of this project.
               </p>
@@ -143,7 +161,7 @@ export default function Test() {
               </a>
             </div>
             <div className="trainer">
-              <h3 className="secondary mb">Abhineet Baghel</h3>
+              <h3 className="secondary mb">Ankur Gupta</h3>
               <p className="tertiary mb">
               I worked on  Integration side of this project.
               </p>
@@ -159,4 +177,4 @@ export default function Test() {
       </div>
     </>
   );
-}
+          }

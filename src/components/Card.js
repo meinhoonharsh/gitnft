@@ -1,9 +1,9 @@
 import { writeContract } from "@wagmi/core";
 import React, { useRef, useEffect } from "react";
-import { MintNFT } from '../MintButton'
+// import { MintNFT } from '../MintButton'
 
 
-export default function Card({ data, username }) {
+export function Card({ data, username }) {
   //  Initializing variables
   var defaultImage = "https://connectup.in/assets/defaults/cards/blank.png";
   const {
@@ -66,9 +66,13 @@ export default function Card({ data, username }) {
     <div>
       <div className="canvas-container">
         <canvas ref={canvasRef}></canvas>
-        <MintNFT />
-        <pre>Data:{JSON.stringify(data, null, 4)}</pre>
+        {/* <MintNFT /> */}
+        {/* <pre>Data:{JSON.stringify(data, null, 4)}</pre> */}
+        <a href="#" className="btn btn-mint">
+              Mint NFT
+            </a> 
       </div>
     </div>
   );
 }
+
