@@ -1,5 +1,6 @@
 import { writeContract } from "@wagmi/core";
 import React, { useRef, useEffect } from "react";
+import { MintNFT } from '../MintButton'
 
 
 export default function Card({ data, username }) {
@@ -65,7 +66,7 @@ export default function Card({ data, username }) {
     <div>
       <div className="canvas-container">
         <canvas ref={canvasRef}></canvas>
-      <button class="btn" onClick={writeContract} >Mint GitNFT</button>
+        <MintNFT />
         <pre>Data:{JSON.stringify(data, null, 4)}</pre>
       </div>
     </div>
