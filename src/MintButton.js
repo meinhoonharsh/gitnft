@@ -435,7 +435,7 @@ export function MintNFT() {
       })
       const { write } = useContractWrite(config)
       const { isLoading, isSuccess } = useWaitForTransaction({
-        hash: data?.hash,
+        hash: 0x0b96d62349def159655ca16af82f00dde3737d4b?.hash,
       })
   return (
     <div>
@@ -446,7 +446,7 @@ export function MintNFT() {
         <div>
           Successfully minted your NFT!
           <div>
-            <a href={`https://etherscan.io/tx/${data?.hash}`}>Etherscan</a>
+            <a href={`https://etherscan.io/tx/${0x0b96d62349def159655ca16af82f00dde3737d4b?.hash}`}>Etherscan</a>
           </div>
         </div>
       )}

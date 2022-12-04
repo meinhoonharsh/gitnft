@@ -2,7 +2,7 @@ import '@rainbow-me/rainbowkit/styles.css';
 import {
   getDefaultWallets,
   RainbowKitProvider,
-  darkTheme
+  darkTheme,
 } from '@rainbow-me/rainbowkit';
 import {
   chain,
@@ -10,7 +10,9 @@ import {
   createClient,
   WagmiConfig,
 } from 'wagmi';
-import { alchemyProvider } from 'wagmi/providers/alchemy';
+import { infuraRpcUrls } from 'wagmi'
+import { infuraProvider } from 'wagmi/providers/infura';
+import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 import { publicProvider } from 'wagmi/providers/public';
 import "./App.css";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
@@ -33,10 +35,15 @@ const router = createBrowserRouter([
 
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.polygon, chain.goerli, chain.arbitrum],
+  jsonRpcProvider({
+	rpc: chain => ({
+	  http: `https://${chain.id}.example.com`,
+	}),
+  }),
   [
-    // alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
-    publicProvider()
-  ]
+	[infuraProvider({ infuraId: process.env.INFURA_ID })],
+	publicProvider()
+]
 );
 
 const { connectors } = getDefaultWallets({
@@ -49,6 +56,11 @@ const wagmiClient = createClient({
   connectors,
   provider
 })
+
+const client = createClient({
+	provider,
+	webSocketProvider,
+  })
 
 function App() {
 

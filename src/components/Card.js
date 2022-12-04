@@ -72,3 +72,4 @@ export default function Card({ data, username }) {
     </div>
   );
 }
+
