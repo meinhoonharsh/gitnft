@@ -2,6 +2,7 @@ import '@rainbow-me/rainbowkit/styles.css';
 import {
   getDefaultWallets,
   RainbowKitProvider,
+  AvatarComponent
   darkTheme,
 } from '@rainbow-me/rainbowkit';
 import {
@@ -46,6 +47,29 @@ const { chains, provider } = configureChains(
 ]
 );
 
+const CustomAvatar: AvatarComponent = ({ address, ensImage, size }) => {
+  const color = generateColorFromAddress(address);
+  return ensImage ? (
+    <img
+      src={ensImage}
+      width={size}
+      height={size}
+      style={{ borderRadius: 999 }}
+    />
+  ) : (
+    <div
+      style={{
+        backgroundColor: color,
+        borderRadius: 999,
+        height: size,
+        width: size,
+      }}
+    >
+      :^)
+    </div>
+  );
+};
+
 const { connectors } = getDefaultWallets({
   appName: 'My Git NFT App',
   chains
@@ -66,7 +90,7 @@ function App() {
 
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider  chains={chains} coolMode={chains} theme={darkTheme({
+      <RainbowKitProvider  chains={chains} coolMode={chains} avatar={CustomAvatar} theme={darkTheme({
       accentColor: '#7b3fe4',
       accentColorForeground: 'white',
       borderRadius: 'small',
